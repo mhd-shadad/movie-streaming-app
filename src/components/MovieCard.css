@@ -1,0 +1,106 @@
+/* src/components/MovieCard.css */
+.movie-card {
+    display: block;
+    background: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.movie-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+.movie-card-poster {
+    position: relative;
+    aspect-ratio: 2 / 3;
+    overflow: hidden;
+    background: #111;
+}
+
+.movie-card-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.movie-card:hover .movie-card-poster img {
+    transform: scale(1.05);
+}
+
+.movie-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.movie-card:hover .movie-card-overlay {
+    opacity: 1;
+}
+
+.movie-card-overlay i {
+    font-size: 3rem;
+    color: #e50914;
+    text-shadow: 0 4px 20px rgba(229, 9, 20, 0.4);
+}
+
+.movie-card-overlay span {
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.movie-card-info {
+    padding: 0.75rem 1rem 1rem;
+}
+
+.movie-card-title {
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.3;
+    min-height: 2.6rem;
+}
+
+.movie-card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.movie-card-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: #f5c518;
+    font-weight: 600;
+}
+
+.movie-card-rating i {
+    font-size: 0.8rem;
+}
+
+.movie-card-year {
+    color: #666;
+}

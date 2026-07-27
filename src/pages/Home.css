@@ -1,0 +1,103 @@
+/* src/pages/Home.css */
+.home-page {
+    padding-top: 1rem;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a0a0a 50%, #0a0a0a 100%);
+    border-radius: 20px;
+    padding: 4rem 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 70% 30%, rgba(229, 9, 20, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    color: #fff;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+    line-height: 1.2;
+}
+
+.hero-content h1 span {
+    color: #e50914;
+}
+
+.hero-content p {
+    color: #999;
+    font-size: 1.15rem;
+    max-width: 500px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.stat-label {
+    color: #666;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.movies-section {
+    padding-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 2.5rem 1.5rem;
+        border-radius: 16px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-stats {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+    }
+
+    .stat-number {
+        font-size: 1.4rem;
+    }
+}

@@ -1,0 +1,144 @@
+/* src/components/Header.css */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(18, 18, 18, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 0.75rem 0;
+}
+
+.header-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #e50914;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+.logo i {
+    font-size: 1.8rem;
+}
+
+.logo span {
+    color: #fff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s;
+    padding: 0.4rem 0;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #e50914;
+    transition: width 0.3s;
+}
+
+.nav-links a:hover {
+    color: #fff;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: background 0.3s;
+}
+
+.search-form:focus-within {
+    background: rgba(255, 255, 255, 0.14);
+}
+
+.search-input {
+    background: transparent;
+    border: none;
+    padding: 0.6rem 1rem;
+    color: #fff;
+    font-size: 0.95rem;
+    width: 220px;
+    outline: none;
+}
+
+.search-input::placeholder {
+    color: #666;
+}
+
+.search-btn {
+    background: transparent;
+    border: none;
+    color: #888;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    transition: color 0.2s;
+    font-size: 1rem;
+}
+
+.search-btn:hover {
+    color: #e50914;
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-wrap: wrap;
+        padding: 0 1rem;
+        gap: 0.75rem;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .search-form {
+        order: 2;
+        flex: 1;
+    }
+
+    .search-input {
+        width: 100%;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+    }
+}

@@ -1,0 +1,55 @@
+/* src/components/MovieList.css */
+.movie-list-section {
+    margin-bottom: 2rem;
+}
+
+.movie-list-title {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.3px;
+}
+
+.movie-list-title::after {
+    content: '';
+    display: block;
+    width: 48px;
+    height: 3px;
+    background: #e50914;
+    margin-top: 0.4rem;
+    border-radius: 2px;
+}
+
+.movie-list-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1.5rem;
+}
+
+.movie-list-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    color: #555;
+    text-align: center;
+}
+
+.movie-list-empty i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.movie-list-empty p {
+    font-size: 1.1rem;
+}
+
+@media (max-width: 600px) {
+    .movie-list-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 1rem;
+    }
+}
